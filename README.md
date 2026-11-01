@@ -62,7 +62,25 @@ LLMを用いた自律コーディングにおいて頻発する以下の問題�
 
 ## 導入と運用
 
-1. **導入**: `AGENTS.md`, `.agents/`, `docs/` を対象プロジェクトのルートディレクトリに配置する。
+### 別プロジェクトへの導入（推奨: AI自動セットアップ）
+
+対象プロジェクトのルートで一時クローンし、[HANDOVER.md](file:///Users/abekoudai/Desktop/dev_md/HANDOVER.md) をAIに渡すだけで完了します：
+
+```bash
+git checkout -b setup-dev-md
+git clone https://github.com/kodai-n11qbb/dev_md.git .tmp_dev_md
+```
+
+AIチャットで以下を送信（メンションするだけで全自動実行）：
+> `@.tmp_dev_md/HANDOVER.md`
+> （または「`.tmp_dev_md/HANDOVER.md` を読んで」）
+
+AIが確認や質問を挟むことなく、必要なファイル（`AGENTS.md`, `.agents/skills/`, `docs/`）の配置、環境判定、一時ディレクトリの削除まで一気通貫で完遂します。
+
+---
+
+### 手動導入
+1. **配置**: `AGENTS.md`, `.agents/`, `docs/` を対象プロジェクトのルートディレクトリに手動でコピーする。
 2. **実行**: エージェントを起動すると `AGENTS.md` が自動認識され、入力内容に応じたスキルがオンデマンドでロードされる。
 3. **拡張**:
    - 仕様書が必要な場合: `docs/` 配下に実体ファイル（`architecture.md` 等）を追加する。
