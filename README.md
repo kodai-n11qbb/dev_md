@@ -25,7 +25,8 @@ LLMを用いた自律コーディングにおいて頻発する以下の問題�
 ├── .agents/skills/                          # フェーズ別オンデマンドスキル（How to work）
 │   ├── goal-setting/SKILL.md                # PHASE_1a: 目的設定・対話ブレーキ（Why/Who/Non-Goal/DoD）
 │   ├── graphify/SKILL.md                    # PHASE_2: ナレッジグラフによる構造探索（丸読み抑止）
-│   └── ponytail/SKILL.md                    # PHASE_3: 7段階判断ラダー・最小実装・テスト義務化
+│   ├── ponytail/SKILL.md                    # PHASE_3: 7段階判断ラダー・最小実装・テスト義務化
+│   └── security-check/SKILL.md              # PHASE_4: CLI脆弱性スキャン・CVSS 7.0+ブロック
 └── docs/                                    # プロジェクト固有の記録・管理（What & Why）
     ├── decision-log.md                      # ADR（技術選定およびSpike撤退リミッターの記録）
     └── _meta_guide.md                       # ルール保守・自己進化ガイド
@@ -44,6 +45,7 @@ LLMを用いた自律コーディングにおいて頻発する以下の問題�
 | **PHASE_1b** | 方針合意後 | 該当設計書（`docs/` 配下） | 合意内容をピンポイントで設計書に固定する。 |
 | **PHASE_2** | 構造把握・既存調査 | `.agents/skills/graphify` | ファイルの丸読みを行わず、グラフ依存パスを探索する。 |
 | **PHASE_3** | 実装・テスト | `.agents/skills/ponytail` | 7段階判断ラダーで最小限の実装を行い、テスト実行（ALL PASS）を確認して納品する。 |
+| **PHASE_4** | セキュリティ検査・リリース前 | `.agents/skills/security-check` | CLIツール（トークン最小）でHigh/Critical（CVSS 7.0+）を検出し、該当箇所のみ修正する。 |
 
 ---
 

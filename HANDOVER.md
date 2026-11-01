@@ -61,7 +61,7 @@ AIは以下のステップを**1つのターン内で中断せず、自律的に
 
 【配置・更新された資産】
 - AGENTS.md : エージェント自動認識エントリーポイント
-- .agents/skills/ : オンデマンドスキル群（goal-setting, graphify, ponytail）
+- .agents/skills/ : オンデマンドスキル群（goal-setting, graphify, ponytail, security-check）
 - docs/ : 保守ガイド（_meta_guide.md）、ADR（decision-log.md）
 - .gitignore : graphify-out/ を追加
 
@@ -72,5 +72,6 @@ AIは以下のステップを**1つのターン内で中断せず、自律的に
 【開発の始め方】
 - 機能を作りたい時: 「〜を作りたい」「〜を実装して」（PHASE_1a: 目的設定が起動）
 - 軽微な修正・バグ対応: そのまま修正内容を指示（PHASE_0が起動）
+- セキュリティ検査: 「セキュリティチェックして」（PHASE_4: CLI高速スキャンが起動）
 - ルールを見直したい時: 「ルールを見直して」（保守プロトコルが起動）
 ```
