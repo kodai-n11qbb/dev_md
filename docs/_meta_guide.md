@@ -18,7 +18,7 @@
 人間からの指示に応じて、以下のいずれかを実行する：
 
 ### タスクA：整合性チェック（Lintモード）
-- **対象**: `AGENTS.md`, `.agents/skills/`, `docs/DEV_POLICY.md`, `docs/CODING_RULES.md`, `docs/index.md`, `docs/decision-log.md`
+- **対象**: `AGENTS.md`, `.agents/skills/`, `docs/decision-log.md`
 - **点検項目**:
   - ファイル間の参照リンクやパス（相対パス）に切れ・間違いがないか
   - フェーズ呼称（PHASE_0, 1a, 1b, 2, 3）が全体で統一されているか
@@ -32,8 +32,8 @@
 
 ### タスクC：新規ルール・ノウハウの安全な取り込み（拡張モード）
 - 人間から「〇〇のルールを足したい」と要望があった場合：
-  - 安易に新しい `.md` ファイルを増やさない（KISS原則の徹底）。
-  - 既存のどのファイル（DEV_POLICY / CODING_RULES / decision-log）のどこに、何行で追加するのが最もトークン効率が良いかを設計し、差分（diff）を提示する。
+  - 安易に新しいファイルやスキルを増やさない（KISS原則の徹底）。
+  - 既存のどのファイル（`AGENTS.md` / `.agents/skills/` / `docs/decision-log.md`）のどこに、何行で追加するのが最もトークン効率が良いかを設計し、差分（diff）を提示する。
 
 ---
 
