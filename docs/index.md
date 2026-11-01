@@ -9,9 +9,9 @@
 
 | 書類名 | 用途 | ステータス |
 | :--- | :--- | :--- |
-| [CODING_RULES.md](file:///Users/abekoudai/Desktop/dev_md/docs/CODING_RULES.md) | 実装規約（Ponytail 7段階ラダー・テスト義務化） | 確定 |
-| [DEV_POLICY.md](file:///Users/abekoudai/Desktop/dev_md/docs/DEV_POLICY.md) | 協働プロトコル（対話ブレーキ・自律推進） | 確定 |
-| [decision-log.md](file:///Users/abekoudai/Desktop/dev_md/docs/decision-log.md) | ADR（技術選定・Spike撤退記録） | 確定 |
+| [CODING_RULES.md](CODING_RULES.md) | 実装規約（Ponytail 7段階ラダー・テスト義務化） | 確定 |
+| [DEV_POLICY.md](DEV_POLICY.md) | 協働プロトコル（対話ブレーキ・自律推進） | 確定 |
+| [decision-log.md](decision-log.md) | ADR（技術選定・Spike撤退記録） | 確定 |
 | `architecture.md` | システム全体構成・主要データフロー | 必要時作成 |
 | `api-spec.md` | エンドポイント・インターフェース仕様 | 必要時作成 |
 

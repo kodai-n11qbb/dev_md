@@ -18,9 +18,9 @@
 人間からの指示に応じて、以下のいずれかを実行する：
 
 ### タスクA：整合性チェック（Lintモード）
-- **対象**: `_ai_guide.md`, `docs/DEV_POLICY.md`, `docs/CODING_RULES.md`, `docs/index.md`, `docs/decision-log.md`
+- **対象**: `AGENTS.md`, `.agents/skills/`, `docs/DEV_POLICY.md`, `docs/CODING_RULES.md`, `docs/index.md`, `docs/decision-log.md`
 - **点検項目**:
-  - ファイル間の参照リンクやパスに切れ・間違いがないか
+  - ファイル間の参照リンクやパス（相対パス）に切れ・間違いがないか
   - フェーズ呼称（PHASE_0, 1a, 1b, 2, 3）が全体で統一されているか
   - ルール同士に矛盾や食い違いがないか
 
