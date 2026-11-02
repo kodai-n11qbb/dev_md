@@ -18,8 +18,8 @@ AIエージェントの自動エントリーポイント。
 
 | フェーズ | トリガー・目的 | 呼び出すスキル・規約 | 主な行動 |
 | :--- | :--- | :--- | :--- |
-| **PHASE_1a** | 要件検討・「〜したい」 | `.agents/skills/goal-setting` | **コード・書類は書かない。** Why / Who / Non-Goal / DoD を引き出し合意をとる。 |
-| **PHASE_1b** | 方針合意後の仕様固定 | 対象ドキュメント | 合意内容をピンポイントで設計書に固定する。 |
+| **PHASE_1a** | 要件検討・「〜したい」 | `.agents/skills/goal-setting` | **コード・書類は書かない。** `docs/concept.md` と照合し、Why / Who / Non-Goal / DoD を引き出し合意をとる。 |
+| **PHASE_1b** | 方針合意後の仕様固定 | 対象ドキュメント | 合意内容をピンポイントで設計書に固定する（必要なら `concept.md` のスコープも更新）。 |
 | **PHASE_2** | 構造把握・既存調査 | `.agents/skills/graphify` | ファイル丸読みをせず、ナレッジグラフから依存関係を探索する。 |
 | **PHASE_3** | 実装・テスト | `.agents/skills/ponytail` | 7段階ラダーで最小限の実装を行い、テスト実行（ALL PASS）を確認して納品する。 |
 | **PHASE_4** | セキュリティ検査・「セキュリティ見て」「脆弱性チェック」 | `.agents/skills/security-check` | CLIツールを自己調達・実行し、High/Critical（CVSS 7.0+）を検出して該当箇所のみ修正する。 |

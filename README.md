@@ -28,6 +28,7 @@ LLMを用いた自律コーディングにおいて頻発する以下の問題�
 │   ├── ponytail/SKILL.md                    # PHASE_3: 7段階判断ラダー・最小実装・テスト義務化
 │   └── security-check/SKILL.md              # PHASE_4: CLI脆弱性スキャン・CVSS 7.0+ブロック
 └── docs/                                    # プロジェクト固有の記録・管理（What & Why）
+    ├── concept.md                           # プロジェクトの目的・北極星（Why/Who/Scope照合器）
     ├── decision-log.md                      # ADR（技術選定およびSpike撤退リミッターの記録）
     └── _meta_guide.md                       # ルール保守・自己進化ガイド
 ```
@@ -41,8 +42,8 @@ LLMを用いた自律コーディングにおいて頻発する以下の問題�
 | フェーズ | トリガー | 読み込むスキル/規約 | 動作制約 |
 | :--- | :--- | :--- | :--- |
 | **PHASE_0** | 軽微な修正（タイポ、CSS/単一バグ修正） | 直接修正 | ドキュメント更新・スキル読込をスキップし、即座に修正・完了する。 |
-| **PHASE_1a** | 要件検討・「〜したい」「〜作って」 | `.agents/skills/goal-setting` | **コード・設計書は書かない。** Why / Who / Non-Goal / DoD を整理し、要約合意をとる。 |
-| **PHASE_1b** | 方針合意後 | 該当設計書（`docs/` 配下） | 合意内容をピンポイントで設計書に固定する。 |
+| **PHASE_1a** | 要件検討・「〜したい」「〜作って」 | `.agents/skills/goal-setting` | **コード・設計書は書かない。** `docs/concept.md` と照合し、Why / Who / Non-Goal / DoD を合意。 |
+| **PHASE_1b** | 方針合意後 | 該当設計書（`docs/` 配下） | 合意内容をピンポイントで設計書に固定する（必要なら `concept.md` も更新）。 |
 | **PHASE_2** | 構造把握・既存調査 | `.agents/skills/graphify` | ファイルの丸読みを行わず、グラフ依存パスを探索する。 |
 | **PHASE_3** | 実装・テスト | `.agents/skills/ponytail` | 7段階判断ラダーで最小限の実装を行い、テスト実行（ALL PASS）を確認して納品する。 |
 | **PHASE_4** | セキュリティ検査・リリース前 | `.agents/skills/security-check` | CLIツール（トークン最小）でHigh/Critical（CVSS 7.0+）を検出し、該当箇所のみ修正する。 |
