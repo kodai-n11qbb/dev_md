@@ -1,7 +1,0 @@
-# dev_md knowledge graph
-graphify-out/
-
-# Environment files
-.env
-.env.*
-!.env.example
